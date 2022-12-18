@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/detail.css">
+    <title>Détails</title>
+</head>
+<body>
+    <a href="/project/"><img class="logo" src="https://www.freepnglogos.com/uploads/whale-png/download-whale-fish-png-transparent-images-transparent-21.png" alt="logo"></a>
+
+    <h1>Détails de l'article</h1>
+
+    <div class="main">
+        <div class="card">
+            <p>Nom : {{ data.name }}</p>
+            <img src="{{ data.image }}" alt="">
+            <p>Prix : {{ data.price }} €</p>
+            <p>Stock : {{ data.stock }}</p>
+
+            <div class="actions">
+                <a class="button_action" href="/project/update/{{ data.id }}">Modifier</a>
+                <a class="button_action" href="/project/delete/{{ data.id }}">Supprimer</a>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

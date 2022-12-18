@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/delete.css">
+    <title>Supprimer</title>
+</head>
+<body>
+    <a href="/project/"><img class="logo" src="https://www.freepnglogos.com/uploads/whale-png/download-whale-fish-png-transparent-images-transparent-21.png" alt="logo"></a>
+    <div class="main">
+        <form method="POST">
+            {% csrf_token %}
+            <p>Vous êtes sur le point de supprimer un élément</p>
+            <p>Supprimer l'article ?</p>
+            <input type="submit" value="Supprimer" />
+            <a href="/project/view">Retour </a>
+        </form>
+    </div>
+    
+</body>
+</html>

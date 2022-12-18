@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/view.css">
+    <title>Liste</title>
+</head>
+<body>
+    <a href="/project/"><img class="logo" src="https://www.freepnglogos.com/uploads/whale-png/download-whale-fish-png-transparent-images-transparent-21.png" alt="logo"></a>
+    <h1>Liste des articles</h1>
+    <div class="main">
+
+        {% for data in dataset %}
+        <div class="product">
+            <div class="products_data">
+                <p>Nom : {{ data.name }}</p>
+                <p>Prix : {{ data.price }} €</p>
+                <p>Stock : {{ data.stock }} restant(s)</p><br/>
+            </div>
+            
+            <div>
+                <a class="products_actions" href="/project/view/{{ data.id }}">Voir</a>
+                <a class="products_actions" href="/project/update/{{ data.id }}">Modifier</a>
+                <a class="products_actions" href="/project/delete/{{ data.id }}">Supprimer</a>
+            </div>
+            
+            <hr/>
+        </div>
+    
+        {% endfor %}
+    
+    </div>    
+</body>
+</html>
